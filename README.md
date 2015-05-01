@@ -1,4 +1,4 @@
-# TeamCity agent
+# Dockerfile for a TeamCity agent
 
 Based on https://bitbucket.org/ariya/docker-centos/src/a4348d8b6aeca6ea2e93d370ab9d80cb2b19f4ca/centos7-teamcity-agent/?at=master .
 
