@@ -11,9 +11,14 @@ if [ -z "$TEAMCITY_SERVER" ]; then
     exit
 fi
 
+if [ ! -z "$DOCKER_OPTS" ]; then
+    echo "DOCKER_OPTS=$DOCKER_OPTS" >> /etc/default/docker
+    service docker restart
+fi
+
 if [ ! -d "$AGENT_DIR" ]; then
     cd ${HOME}
-    echo "Setting up TeamCityagent for the first time..."
+    echo "Setting up TeamCity agent for the first time..."
     echo "Agent will be installed to ${AGENT_DIR}."
     mkdir -p $AGENT_DIR
     wget $TEAMCITY_SERVER/update/buildAgent.zip
