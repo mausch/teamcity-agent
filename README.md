@@ -1,8 +1,10 @@
 # Dockerfile for a TeamCity agent
 
-Dockerhub image: https://registry.hub.docker.com/u/elevate/skills-similarity-server/
+Dockerhub image: https://registry.hub.docker.com/u/mausch/teamcity-agent/
 
 Based on https://bitbucket.org/ariya/docker-centos/src/a4348d8b6aeca6ea2e93d370ab9d80cb2b19f4ca/centos7-teamcity-agent/?at=master .
+
+## Usage:
 
 ```
 docker run -d -p 9090:9090 --name teamcity-agent -e TEAMCITY_SERVER=http://10.0.0.10:8000 --privileged=true mausch/teamcity-agent
