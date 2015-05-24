@@ -7,7 +7,9 @@ Based on https://bitbucket.org/ariya/docker-centos/src/a4348d8b6aeca6ea2e93d370a
 ## Usage:
 
 ```
-docker run -d -p 9090:9090 --name teamcity-agent -e TEAMCITY_SERVER=http://10.0.0.10:8000 --privileged=true mausch/teamcity-agent
+docker run -d -p 9090:9090 --name teamcity-agent --privileged=true \
+  -e TEAMCITY_SERVER=http://10.0.0.10:8000 \
+  mausch/teamcity-agent
 ```
 
 After the container starts, you need to authorise the agent in the server.
