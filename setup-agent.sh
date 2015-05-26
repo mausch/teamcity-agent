@@ -13,7 +13,14 @@ fi
 
 if [ ! -z "$DOCKER_OPTS" ]; then
     echo "DOCKER_OPTS=$DOCKER_OPTS" >> /etc/default/docker
-    service docker restart
+    service docker stop
+    service docker start 
+fi
+
+if [ ! -z "$DOCKER_HOST" ]; then
+    echo "DOCKER_HOST=$DOCKER_HOST" >> /etc/default/docker
+    service docker stop
+    service docker start 
 fi
 
 if [ ! -d "$AGENT_DIR" ]; then
