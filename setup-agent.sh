@@ -23,6 +23,8 @@ if [ ! -z "$DOCKER_HOST" ]; then
     service docker start 
 fi
 
+service docker start
+
 if [ ! -d "$AGENT_DIR" ]; then
     cd ${HOME}
     echo "Setting up TeamCity agent for the first time..."
