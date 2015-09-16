@@ -21,7 +21,8 @@ After the container starts, you need to authorise the agent in the server.
 
 This image includes docker so you can:
 
-* create an image of your app, then 
-* test your app inside a container of this image, then 
-* push the tested image to a registry.
+1. create an image of your app, then 
+1. test your app inside a container of this image, then 
+1. push the tested image to a registry.
 
+Or simply run the build environment in a docker container, then push the artifacts to some package repository.
