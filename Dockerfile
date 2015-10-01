@@ -1,6 +1,6 @@
 FROM java:8
 
-RUN apt-get update && apt-get install -y apt-transport-https
+RUN apt-get update && apt-get install -y apt-transport-https sudo wget ca-certificates
 
 
 # copied from https://github.com/docker-library/docker/blob/bb15fc25bbd4f51a880cf02f91eab447b1083b75/1.8/Dockerfile
